@@ -27,12 +27,17 @@ let g:mapleader = ","
 " Fast saving
 nmap <leader>w :w!<cr>
 
+" Persistent undo
+set undofile                " Save undo's after file closes
+set undodir=$HOME/.vim/undo " where to save undo histories
+set undolevels=1000         " How many undos
+set undoreload=10000        " number of lines to save for undo
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set 7 lines to the cursor - when moving vertically using j/k
-set so=5
+set so=4
 
 set cursorline
 
@@ -92,10 +97,12 @@ set tm=500
 syntax enable
 
 set background=dark
-"colorscheme twilight
 "let g:solarized_termcolors=256
-colorscheme hybrid
+"colorscheme hybrid
 "colorscheme solarized
+"colorscheme vividchalk
+"colorscheme distinguished
+colorscheme jellybeans
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -510,12 +517,20 @@ Plugin 'bling/vim-airline'
 Plugin 'Rykka/riv.vim'
 Plugin 'Rykka/InstantRst'
 Plugin 'Rykka/clickable.vim'
+Plugin 'Raimondi/delimitMate'
+
+Plugin 'majutsushi/tagbar'
+Plugin 'xolox/vim-easytags'
+Plugin 'xolox/vim-misc'
+Plugin 'lukaszkorecki/CoffeeTags' 
 " Color themes
 Plugin 'w0ng/vim-hybrid'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'tpope/vim-vividchalk'
 
 " vim-scripts repos
+Plugin 'ConfirmQuit.vim'
 Plugin 'L9'
 Plugin 'FuzzyFinder'
 " Plugin 'vim-coffee-script'
@@ -537,7 +552,10 @@ filetype plugin indent on     " required!
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Plugin command are not allowed..
 
-
+""" Tagbar config and friends
+nmap <F8> :TagbarToggle<CR>
+let g:CoffeeAutoTagDisabled=1
+let g:CoffeeAutoTagIncludeVars=1
 
 """Neo Complete Cache config
 
