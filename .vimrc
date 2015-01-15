@@ -238,6 +238,10 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Select whole file
+nnoremap <C-a> ggVG
+
 " Remap VIM 0 to first non-blank character
 map 0 ^
 
@@ -518,6 +522,7 @@ Plugin 'Rykka/riv.vim'
 Plugin 'Rykka/InstantRst'
 Plugin 'Rykka/clickable.vim'
 Plugin 'Raimondi/delimitMate'
+Plugin 'tmhedberg/indent-motion'
 
 Plugin 'majutsushi/tagbar'
 Plugin 'xolox/vim-easytags'
@@ -718,3 +723,4 @@ omap / <Plug>(easymotion-tn)
 map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
 let g:airline_powerline_fonts = 1
+
