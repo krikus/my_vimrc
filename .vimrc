@@ -87,12 +87,17 @@ set mat=2
 set noerrorbells
 set novisualbell
 set t_vb=
+
+" sets timeout for leader (default 1000)
 set tm=500
+
+" shows currently imputted command
+set showcmd
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Enable syntax highlighting
 syntax enable
 
@@ -239,9 +244,6 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Select whole file
-nnoremap <C-a> ggVG
-
 " Remap VIM 0 to first non-blank character
 map 0 ^
 
@@ -293,7 +295,7 @@ autocmd BufWrite *.#coffee :call DeleteTrailingWS()
 vnoremap <silent> gv :call VisualSelection('gv')<CR>
 
 " Open vimgrep and put the cursor in the right position
-" map <leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
+map <leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
 
 " Vimgreps in the current file
 " map <leader><space> :vimgrep // <C-R>%<C-A><right><right><right><right><right><right><right><right><right>
@@ -306,7 +308,7 @@ vnoremap <silent> gv :call VisualSelection('gv')<CR>
 " When you search with vimgrep, display your results in cope by doing:
 "   <leader>cc
 "
-map <leader>cc :botright cope<cr>
+"map <leader>cc :botright cope<cr>
 map <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
 map <leader>n :cn<cr>
 map <leader>p :cp<cr>
