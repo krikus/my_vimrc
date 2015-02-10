@@ -481,82 +481,64 @@ set mouse=a "bo myszka być musi!
 set mousemodel=extend
 
 set omnifunc=syntaxcomplete#Complete
-"wymagane przez vundle
 
-set nocompatible               " be iMproved
-filetype off                   " required!
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle
-" required!
-Plugin 'gmarik/Vundle.vim'
-
+call plug#begin('~/.vim/plugged')
 " My Plugins here:
 "
 " original repos on github
-Plugin 'tpope/vim-fugitive'
-Plugin 'Lokaltog/vim-easymotion'
-" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-"Plugin 'tpope/vim-rails.git'
-Plugin 'scrooloose/nerdtree'
-Plugin 'kchmck/vim-coffee-script'
-"Plugin 'Valloric/YouCompleteMe'
-"Plugin 'marijnh/tern_for_vim'
-Plugin 'wavded/vim-stylus'
-Plugin 'scrooloose/syntastic.git'
-Plugin 'fholgado/minibufexpl.vim'
-Plugin 'Valloric/MatchTagAlways'
-Plugin 'derekwyatt/vim-scala'
-Plugin 'Shougo/neocomplcache.vim'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-surround'
-Plugin 'kien/ctrlp.vim.git'
-Plugin 'mattn/emmet-vim'
-Plugin 'mbbill/undotree'
-Plugin 'briancollins/vim-jst'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'bling/vim-airline'
-Plugin 'Rykka/riv.vim'
-Plugin 'Rykka/InstantRst'
-Plugin 'Rykka/clickable.vim'
-Plugin 'Raimondi/delimitMate'
-Plugin 'tmhedberg/indent-motion'
+Plug 'tpope/vim-fugitive'
+Plug 'Lokaltog/vim-easymotion'
+" Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
+"Plug 'tpope/vim-rails.git'
+Plug 'scrooloose/nerdtree'
+Plug 'kchmck/vim-coffee-script'
+"Plug 'Valloric/YouCompleteMe'
+"Plug 'marijnh/tern_for_vim'
+Plug 'wavded/vim-stylus'
+Plug 'scrooloose/syntastic'
+Plug 'fholgado/minibufexpl.vim'
+Plug 'Valloric/MatchTagAlways'
+Plug 'derekwyatt/vim-scala'
+Plug 'Shougo/neocomplcache.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-surround'
+Plug 'kien/ctrlp.vim'
+Plug 'mattn/emmet-vim'
+Plug 'mbbill/undotree'
+Plug 'briancollins/vim-jst'
+Plug 'tpope/vim-unimpaired'
+Plug 'scrooloose/nerdcommenter'
+Plug 'bling/vim-airline'
+Plug 'Rykka/riv.vim'
+Plug 'Rykka/InstantRst'
+Plug 'Rykka/clickable.vim'
+Plug 'Raimondi/delimitMate'
+Plug 'tmhedberg/indent-motion'
 
-Plugin 'majutsushi/tagbar'
-Plugin 'xolox/vim-easytags'
-Plugin 'xolox/vim-misc'
-Plugin 'lukaszkorecki/CoffeeTags'
+Plug 'majutsushi/tagbar'
+Plug 'xolox/vim-easytags'
+Plug 'xolox/vim-misc'
+Plug 'lukaszkorecki/CoffeeTags'
 " Color themes
-Plugin 'w0ng/vim-hybrid'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'nanotech/jellybeans.vim'
-Plugin 'tpope/vim-vividchalk'
+Plug 'w0ng/vim-hybrid'
+Plug 'altercation/vim-colors-solarized'
+Plug 'nanotech/jellybeans.vim'
+Plug 'tpope/vim-vividchalk'
 
 " vim-scripts repos
-Plugin 'ConfirmQuit.vim'
-Plugin 'L9'
-Plugin 'FuzzyFinder'
-" Plugin 'vim-coffee-script'
-Plugin 'vim-javascript'
+Plug 'ConfirmQuit.vim'
+Plug 'L9'
+Plug 'FuzzyFinder'
+" Plug 'vim-coffee-script'
+Plug 'vim-javascript'
 
 " non github repos
-" Plugin 'git://git.wincent.com/command-t.git'
-"Plugin 'git://repo.or.cz/vcscommand'
+" Plug 'git://git.wincent.com/command-t.git'
+"Plug 'git://repo.or.cz/vcscommand'
 " ...
-call vundle#end()
+call plug#end()
+
 filetype plugin indent on     " required!
-"
-" Brief help
-" :PluginList          - list configured bundles
-" :PluginInstall(!)    - install(update) bundles
-" :PluginSearch(!) foo - search(or refresh cache first) for foo
-" :PluginClean(!)      - confirm(or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Plugin command are not allowed..
 
 """ Tagbar config and friends
 nmap <F8> :TagbarToggle<CR>
@@ -694,7 +676,7 @@ nmap <leader>l :set list!<CR>
 "highlight SpecialKey guifg=#4a4a59
 "
 " proper font
-set gfn=M+\ 1mn\ Medium\ 12
+set gfn=M+\ 1mn\ Medium\ 14
 
 
 " set coffeescript lint file
