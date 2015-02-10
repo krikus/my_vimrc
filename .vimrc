@@ -51,7 +51,7 @@ set wildignore=*.o,*~,*.pyc
 set ruler
 
 " Height of the command bar
-set cmdheight=2
+set cmdheight=1
 
 " A buffer becomes hidden when it is abandoned
 set hid
@@ -91,8 +91,6 @@ set t_vb=
 " sets timeout for leader (default 1000)
 set tm=500
 
-" shows currently imputted command
-set showcmd
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -115,6 +113,7 @@ if has("gui_running")
     set guioptions+=e
     set t_Co=256
     set guitablabel=%M\ %t
+
 endif
 
 " Set utf8 as standard encoding and en_US as the standard language
@@ -529,7 +528,7 @@ Plugin 'tmhedberg/indent-motion'
 Plugin 'majutsushi/tagbar'
 Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
-Plugin 'lukaszkorecki/CoffeeTags' 
+Plugin 'lukaszkorecki/CoffeeTags'
 " Color themes
 Plugin 'w0ng/vim-hybrid'
 Plugin 'altercation/vim-colors-solarized'
@@ -670,7 +669,7 @@ let g:mta_filetypes = {
     \}
 
     " NerdTree {
-	   map <C-E> :NERDTreeToggle<cr>
+       map <C-E> :NERDTreeToggle<cr>
 "       map <C-e> <plug>NERDTreeTabsToggle<CR>
        map <leader>e :NERDTreeFind<CR>
        nmap <leader>nt :NERDTreeFind<CR>
@@ -695,7 +694,8 @@ nmap <leader>l :set list!<CR>
 "highlight SpecialKey guifg=#4a4a59
 "
 " proper font
-set gfn=M+\ 1mn\ Medium\ 11
+set gfn=M+\ 1mn\ Medium\ 12
+
 
 " set coffeescript lint file
 let coffee_lint_options = '-f ~/.vim/coffeelint.json'
@@ -710,7 +710,7 @@ let g:syntastic_coffee_checkers = ['coffeelint', 'coffee']
 let g:syntastic_coffee_coffeelint_args = "--file ~/.vim/coffeelint.json"
 let g:syntastic_enable_signs=1
 let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'     
+let g:syntastic_warning_symbol='⚠'
 
 " undotree toggle pod <f5>
 nnoremap <F5> :UndotreeToggle<cr>:wincmd j<CR>
@@ -724,5 +724,14 @@ omap / <Plug>(easymotion-tn)
 " different highlight method and have some other features )
 map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
-let g:airline_powerline_fonts = 1
 
+" show tabline only when there's at least one tab
+" 0 = never
+" 1 = at least one
+" 2 = always
+set showtabline=1
+
+" shows currently imputted command
+set showcmd
+
+let g:airline_powerline_fonts = 1
