@@ -541,7 +541,7 @@ Plug 'ahayman/vim-nodejs-complete'
 Plug 'marijnh/tern_for_vim'
 
 " Added by krikus
-Plug 'osyo-manga/vim-over'
+" Plug 'osyo-manga/vim-over'
 
 
 " non github repos
