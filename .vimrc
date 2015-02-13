@@ -2,6 +2,8 @@
 " Maintained by:
 "       Bugari
 "
+" Forked for further improvements/changes by krikus
+"
 " Based on:
 "       Amir Salihefendic
 "       http://amix.dk/blog/post/19691#The-ultimate-Vim-configuration-on-Github
