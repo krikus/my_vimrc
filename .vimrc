@@ -711,7 +711,7 @@ nmap <leader>l :set list!<CR>
 "highlight SpecialKey guifg=#4a4a59
 "
 " proper font
-set gfn=M+\ 1mn\ Medium\ 14
+set gfn=M+\ 1mn\ Medium\ 11
 
 
 " set coffeescript lint file
