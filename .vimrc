@@ -500,7 +500,6 @@ Plug 'wavded/vim-stylus'
 Plug 'scrooloose/syntastic'
 Plug 'fholgado/minibufexpl.vim'
 Plug 'Valloric/MatchTagAlways'
-Plug 'derekwyatt/vim-scala'
 Plug 'Shougo/neocomplcache.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
@@ -527,12 +526,19 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'nanotech/jellybeans.vim'
 Plug 'tpope/vim-vividchalk'
 
+" scala
+Plug 'derekwyatt/vim-scala'
+Plug 'gre/play2vim'
+"
 " vim-scripts repos
 Plug 'ConfirmQuit.vim'
 Plug 'L9'
 Plug 'FuzzyFinder'
-" Plug 'vim-coffee-script'
+
+Plug 'kchmck/vim-coffee-script'
 Plug 'vim-javascript'
+Plug 'ahayman/vim-nodejs-complete'
+Plug 'marijnh/tern_for_vim'
 
 " non github repos
 " Plug 'git://git.wincent.com/command-t.git'
@@ -546,6 +552,32 @@ filetype plugin indent on     " required!
 nmap <F8> :TagbarToggle<CR>
 let g:CoffeeAutoTagDisabled=1
 let g:CoffeeAutoTagIncludeVars=1
+
+let g:tagbar_compact = 1
+" tag for coffee
+if executable('coffeetags')
+  let g:tagbar_type_coffee = {
+        \ 'ctagsbin' : 'coffeetags',
+        \ 'ctagsargs' : '',
+        \ 'kinds' : [
+        \ 'f:functions',
+        \ 'o:object',
+        \ ],
+        \ 'sro' : ".",
+        \ 'kind2scope' : {
+        \ 'f' : 'object',
+        \ 'o' : 'object',
+        \ }
+        \ }
+
+  let g:tagbar_type_markdown = {
+    \ 'ctagstype' : 'markdown',
+    \ 'sort' : 0,
+    \ 'kinds' : [
+        \ 'h:sections'
+    \ ]
+    \ }
+endif
 
 """Neo Complete Cache config
 
@@ -653,8 +685,9 @@ let g:mta_filetypes = {
     \}
 
     " NerdTree {
-       map <C-E> :NERDTreeToggle<cr>
-"       map <C-e> <plug>NERDTreeTabsToggle<CR>
+       "map <C-E> :NERDTreeToggle<CR>
+       map <F2> :NERDTreeToggle<CR>
+       "map <C-e> <plug>NERDTreeTabsToggle<CR>
        map <leader>e :NERDTreeFind<CR>
        nmap <leader>nt :NERDTreeFind<CR>
 
@@ -719,3 +752,6 @@ set showtabline=1
 set showcmd
 
 let g:airline_powerline_fonts = 1
+
+map <F3> :MBEbb<CR>
+map <F4> :MBEbf<CR> 
