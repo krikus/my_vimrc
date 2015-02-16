@@ -476,6 +476,7 @@ noremap <silent> <c-s-down> :call <SID>swap_down()<CR>
 "automatyczne ustalanie typu pliku
 au BufNewFile,BufRead *.dump set filetype=sql
 au BufNewFile,BufRead *.tmpl set filetype=html
+au BufNewFile,BufRead *.tmpl set filetype=ejs
 
 "numerowanie wierszy
 set nu
@@ -544,6 +545,7 @@ Plug 'marijnh/tern_for_vim'
 " Added by krikus
 " Close preview window after auto-completion is used
 let g:ycm_autoclose_preview_window_after_completion = 0
+" END Added by krikus
 
 " non github repos
 " Plug 'git://git.wincent.com/command-t.git'
@@ -588,6 +590,7 @@ endif
 """MatchTagAlways config:
 " obsługiwane formaty:
 let g:mta_filetypes = {
+    \ 'ejs' : 1,
     \ 'html' : 1,
     \ 'xhtml' : 1,
     \ 'xml' : 1,
