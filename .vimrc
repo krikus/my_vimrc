@@ -542,8 +542,8 @@ Plug 'ahayman/vim-nodejs-complete'
 Plug 'marijnh/tern_for_vim'
 
 " Added by krikus
-" Plug 'osyo-manga/vim-over'
-
+" Close preview window after auto-completion is used
+let g:ycm_autoclose_preview_window_after_completion = 0
 
 " non github repos
 " Plug 'git://git.wincent.com/command-t.git'
