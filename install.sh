@@ -2,9 +2,9 @@
 DIR=$(cd `dirname "${BASH_SOURCE[0]}"` && pwd)
 
 if [ ! -e $HOME/.vimrc ]; then
-  CMD="+:PlugInstall"
+  CMD="+:PlugInstall +qall"
 else
-  CMD="+:PlugUpdate"
+  CMD="+:PlugUpdate +qall"
 fi
 
 ln -sf $DIR/.vimrc $HOME/.vimrc
