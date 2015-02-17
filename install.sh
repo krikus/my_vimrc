@@ -25,5 +25,6 @@ else
   cd ~/.vim/plugged/YouCompleteMe
   ./install.sh --clang-completer
   cd ~/.vim/plugged/tern_for_vim
+  mkdir ~/.vim/undo
   npm install
 fi

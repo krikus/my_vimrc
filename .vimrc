@@ -476,7 +476,7 @@ noremap <silent> <c-s-down> :call <SID>swap_down()<CR>
 "automatyczne ustalanie typu pliku
 au BufNewFile,BufRead *.dump set filetype=sql
 au BufNewFile,BufRead *.tmpl set filetype=html
-au BufNewFile,BufRead *.tmpl set filetype=ejs
+au BufNewFile,BufRead *.ejs set filetype=html
 
 "numerowanie wierszy
 set nu
