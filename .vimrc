@@ -102,12 +102,15 @@ set tm=500
 syntax enable
 
 set background=dark
+" color schemes
+let g:lucius_contrast='low'
+let g:lucius_contrast_bg='normal'
+colorscheme lucius
 "let g:solarized_termcolors=256
-"colorscheme hybrid
 "colorscheme solarized
 "colorscheme vividchalk
 "colorscheme distinguished
-colorscheme jellybeans
+"colorscheme jellybeans
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -599,7 +602,7 @@ let g:mta_filetypes = {
     \}
 
     " NerdTree {
-       "map <C-E> :NERDTreeToggle<CR>
+       map <C-E> :NERDTreeToggle<CR>
        map <F2> :NERDTreeToggle<CR>
        "map <C-e> <plug>NERDTreeTabsToggle<CR>
        map <leader>e :NERDTreeFind<CR>
