@@ -118,7 +118,9 @@ if has("gui_running")
     set guioptions+=e
     set t_Co=256
     set guitablabel=%M\ %t
-
+else
+" Special case for terminal
+  colorscheme jellybeans
 endif
 
 " Set utf8 as standard encoding and en_US as the standard language
@@ -289,7 +291,7 @@ func! DeleteTrailingWS()
     exe "normal `z"
 endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()
-autocmd BufWrite *.#coffee :call DeleteTrailingWS()
+autocmd BufWrite *.coffee :call DeleteTrailingWS()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -671,18 +673,4 @@ set showcmd
 let g:airline_powerline_fonts = 1
 
 map <F3> :MBEbb<CR>
-map <F4> :MBEbf<CR> 
-
-"""""""""
-" notes "
-"""""""""
-
-" for javascript development:
-" `apt-get install exuberant-ctags`
-" `apt-get install node`
-"
-" `git clone https://github.com/mozilla/doctorjs.git`
-" and inside: `git submodule update --init --recursive`
-" and then `make install`
-" 
-" about YouCompleteMe it requires `./install.sh --clang-completer`
+map <F4> :MBEbf<CR>
