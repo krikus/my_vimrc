@@ -552,6 +552,12 @@ Plug 'marijnh/tern_for_vim'
 " Added by krikus
 " Close preview window after auto-completion is used
 let g:ycm_autoclose_preview_window_after_completion = 0
+
+" Formatting options [gq]
+Plug 'Chiel92/vim-autoformat'
+let g:formatprg_javascript = "js-beautify"
+let g:formatprg_args_javascript = "--file - --brace-style expand --indent-size 2 --indent-char ' ' --preserve-newlines --max-preserve-newlines 2"
+noremap <leader>f :Autoformat<CR><CR>
 " END Added by krikus
 
 " non github repos
