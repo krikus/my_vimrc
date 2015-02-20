@@ -550,6 +550,9 @@ Plug 'ahayman/vim-nodejs-complete'
 Plug 'marijnh/tern_for_vim'
 
 " Added by krikus
+" camelCase <> MixedCase <> snake_case
+" cr(m/c/_/-)
+Plug 'tpope/vim-abolish'
 " Close preview window after auto-completion is used
 let g:ycm_autoclose_preview_window_after_completion = 0
 
@@ -558,6 +561,10 @@ Plug 'Chiel92/vim-autoformat'
 let g:formatprg_javascript = "js-beautify"
 let g:formatprg_args_javascript = "--file - --brace-style expand --indent-size 2 --indent-char ' ' --preserve-newlines --max-preserve-newlines 2"
 noremap <leader>f :Autoformat<CR><CR>
+
+" Force saving files that require root permission 
+cmap w!! w !sudo tee > /dev/null %
+
 " END Added by krikus
 
 " non github repos
