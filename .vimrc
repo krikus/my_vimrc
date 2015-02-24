@@ -550,6 +550,8 @@ Plug 'ahayman/vim-nodejs-complete'
 Plug 'marijnh/tern_for_vim'
 
 " Added by krikus
+" vim-indentwise plugin 
+Plug 'jeetsukumaran/vim-indentwise'
 " camelCase <> MixedCase <> snake_case
 " cr(m/c/_/-)
 Plug 'tpope/vim-abolish'
