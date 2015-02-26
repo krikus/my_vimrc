@@ -551,6 +551,13 @@ Plug 'ahayman/vim-nodejs-complete'
 Plug 'marijnh/tern_for_vim'
 
 " Added by krikus
+
+" Tasklist <leader>t to activate
+Plug 'vim-scripts/TaskList.vim'
+map <leader>t <Plug>TaskList
+" open window at bottom
+let g:tlWindowPosition = 0
+
 " vim-indentwise plugin 
 Plug 'jeetsukumaran/vim-indentwise'
 " camelCase <> MixedCase <> snake_case
