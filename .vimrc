@@ -551,7 +551,8 @@ Plug 'ahayman/vim-nodejs-complete'
 Plug 'marijnh/tern_for_vim'
 
 " Added by krikus
-
+" git gutter max signs
+let g:gitgutter_max_signs=1500
 " Tasklist <leader>t to activate
 Plug 'vim-scripts/TaskList.vim'
 map <leader>t <Plug>TaskList
