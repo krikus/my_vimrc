@@ -551,6 +551,10 @@ Plug 'ahayman/vim-nodejs-complete'
 Plug 'marijnh/tern_for_vim'
 
 " Added by krikus
+" Display line guides
+Plug 'nathanaelkane/vim-indent-guides'
+let g:indent_guides_guide_size = 1
+let g:indent_guides_enable_on_vim_startup = 1
 " git gutter max signs
 let g:gitgutter_max_signs=1500
 " Tasklist <leader>t to activate
