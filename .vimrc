@@ -582,6 +582,11 @@ cmap w!! w !sudo tee > /dev/null %
 
 " END Added by krikus
 
+" Coffeescript preview window
+Plug 'vim-scripts/a.vim'
+let g:alternateExtensions_coffee = 'js'
+let g:alternateExtensions_js = 'coffee'
+
 " non github repos
 " Plug 'git://git.wincent.com/command-t.git'
 "Plug 'git://repo.or.cz/vcscommand'
