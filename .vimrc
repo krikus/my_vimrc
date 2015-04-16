@@ -143,13 +143,16 @@ set noswapfile
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use spaces instead of tabs
-set expandtab
+"set expandtab
+" We will use hard tabs now
+set noexpandtab
 
 " Be smart when using tabs ;)
 set smarttab
 
 " 1 tab == i spaces
 set shiftwidth=2
+" how to display tabs
 set tabstop=2
 set softtabstop=2
 
@@ -340,7 +343,7 @@ map <leader>s? z=
 " => Misc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remove the Windows ^M - when the encodings gets messed up
-noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+"noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Quickly open a buffer for scripbble
 map <leader>q :e ~/buffer<cr>
@@ -511,7 +514,7 @@ Plug 'scrooloose/syntastic'
 Plug 'fholgado/minibufexpl.vim'
 Plug 'Valloric/MatchTagAlways'
 "Plug 'Shougo/neocomplcache.vim'
-Plug 'airblade/vim-gitgutter'
+"Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
 Plug 'kien/ctrlp.vim'
 Plug 'mattn/emmet-vim'
@@ -551,6 +554,19 @@ Plug 'ahayman/vim-nodejs-complete'
 Plug 'marijnh/tern_for_vim'
 
 " Added by krikus
+" Blazing fast CtrlP using ag
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+			\ --ignore .git
+			\ --ignore .svn
+			\ --ignore .hg
+			\ --ignore .DS_Store
+			\ --ignore "**/*.png"
+			\ --ignore "**/*.jpg"
+			\ --ignore "**/*.pdf"
+			\ --ignore "**/*.gif"
+			\ --ignore "**/*.ttf"
+			\ --ignore "**/*.pyc"
+			\ -g ""'
 " Display line guides
 Plug 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_guide_size = 1
@@ -592,6 +608,7 @@ filetype plugin indent on     " required!
 
 """ Tagbar config and friends
 nmap <F8> :TagbarToggle<CR>
+noremap <leader>m :TagbarToggle<CR>
 let g:CoffeeAutoTagDisabled=1
 let g:CoffeeAutoTagIncludeVars=1
 
