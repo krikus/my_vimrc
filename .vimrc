@@ -532,7 +532,7 @@ Plug 'tmhedberg/indent-motion'
 Plug 'majutsushi/tagbar'
 Plug 'xolox/vim-easytags'
 Plug 'xolox/vim-misc'
-Plug 'lukaszkorecki/CoffeeTags'
+"Plug 'lukaszkorecki/CoffeeTags'
 " Color themes
 Plug 'w0ng/vim-hybrid'
 Plug 'altercation/vim-colors-solarized'
@@ -567,6 +567,8 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
 			\ --ignore "**/*.ttf"
 			\ --ignore "**/*.pyc"
 			\ -g ""'
+" Less support
+Plug 'groenewege/vim-less'
 " Display line guides
 Plug 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_guide_size = 1
