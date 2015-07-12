@@ -18,7 +18,7 @@ then
   echo "We will omit installation of dependencies"
 else
   sudo apt-get install exuberant-ctags git build-essential cmake python-dev fonts-mplus silversearcher-ag
-  sudo npm install -g js-beautify
+  sudo npm install -g js-beautify jshint
   sudo git clone https://github.com/mozilla/doctorjs.git /usr/src/doctorjs
   cd /usr/src/doctorjs
   sudo git submodule update --init --recursive
