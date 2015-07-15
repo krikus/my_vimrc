@@ -689,9 +689,10 @@ let g:coffee_lint_options = '-f ~/.vim/coffeelint.json'
 "------------SYNTASTIC-----------
 let g:syntastic_enable_signs=1
 let g:syntastic_mode_map={ 'mode': 'active',
-                     \ 'active_filetypes': ['coffee'],
+                     \ 'active_filetypes': ['coffee', 'js', 'php'],
                      \ 'passive_filetypes': ['html', 'java'] }
 let g:syntastic_coffee_checkers = ['coffeelint', 'coffee']
+let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_coffee_coffeelint_args = "--file ~/.vim/coffeelint.json"
 let g:syntastic_enable_signs=1
 let g:syntastic_error_symbol='✗'
