@@ -103,14 +103,18 @@ syntax enable
 
 set background=dark
 " color schemes
-let g:lucius_contrast='low'
-let g:lucius_contrast_bg='normal'
-colorscheme lucius
+"let g:lucius_contrast='low'
+"let g:lucius_contrast_bg='normal'
+"colorscheme lucius
 "let g:solarized_termcolors=256
 "colorscheme solarized
 "colorscheme vividchalk
 "colorscheme distinguished
 "colorscheme jellybeans
+let &t_Co=256
+"let g:gruvbox_termcolors=16
+colorscheme gruvbox
+
 
 " Set extra options when running in GUI mode
 if has("gui_running")
