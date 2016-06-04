@@ -541,6 +541,7 @@ Plug 'xolox/vim-misc'
 Plug 'w0ng/vim-hybrid'
 Plug 'altercation/vim-colors-solarized'
 Plug 'nanotech/jellybeans.vim'
+Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-vividchalk'
 
 " scala
