@@ -729,3 +729,5 @@ let g:airline_powerline_fonts = 1
 
 map <F3> :MBEbb<CR>
 map <F4> :MBEbf<CR>
+set secure
+set exrc
